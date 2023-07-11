@@ -1,0 +1,19 @@
+Introduction:
+
+The main goal of the project is to identify the bird by using the samples of their voices. The mp3 samples were tranmuted to the log-frequency spectrograms and loaded to the model. 3 different kind of bird species with unique odd voices from each other were choosen.
+In project there were used the bird voice samples from site https://xeno-canto.org that contain the huge dataset of a various bird from a different countries.
+
+Conclusions:
+
+Three bird that were choosen to the projest were:
+- Label number 0 was for Eurasian eagle-owl (Lat. Bubo bubo, Polish: Puchacz Zwyczajny) - 105 mp3 samples
+- Label number 1 was for Eurasian skylark (Lat. Alauda arvensis, Polish: Skowronek zwyczajny) - 125 mp3 samples
+- Label number 2 was for Rock dove (Lat. Columba livia, Polish: Gołąb skalny) - 124 mp3 samples
+
+The number of samples for each of the bird species was quite similar, so it is a well balanced for learning the model.
+
+Analysing the results F1 score of the model for each classes there is following conclusions:
+- model predict very well for a label number 0, probably because of a characteristic sound of a Eurasian eagle-owl, repeatable and outstanding from the noice of the environment. That was easy to learn by an algorithm of the model.
+- model predictions for Rock dove (label with number 2) was less satisfying than for Eurasian eagle-owl but still on a high level of detection.
+for Eurasian skylark the results wasthe lowest in comparison to prediction of other two classes of the birds. It can be because of more complex and less regular voice of Eurasian skylark.
+Learning model with 10 epochs give a better results of F1 score for bird with label number 1 than model with 30 epochs, but the remaining 2 labels of the birds was less accuracy. Increasing the number of epochs led to increasing the positive predictions for two classes of birds with label 0 and 2.
